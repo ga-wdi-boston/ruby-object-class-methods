@@ -26,9 +26,9 @@ class Song
   attr_reader :title
   attr_accessor :rating
 
-  def initialize(title:)
+  def initialize(title:, rating: nil)
     @title = title
-    @rating
+    @rating = rating
   end
 end
 
