@@ -15,4 +15,12 @@ class Album
             Song.new(title: 'Sandcastles'),
             Song.new(title: 'Freedom'),
             Song.new(title: 'Formation')].map(&:freeze)
+
+  def self.search(search)
+    TRACKS.select { |song| song.title.upcase.include? search.upcase }.first
+  end
+
+  def self.count
+    TRACKS.length
+  end
 end
